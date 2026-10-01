@@ -59,15 +59,17 @@ a { color: #0b57d0; }
 - the keyboard mode you last used in each app (stored with that app's package name), so the App can open in the same mode next time;<br>
 - words you choose to save to your dictionary with the check mark in the suggestion bar;<br>
 - pairs of words learned from your typing, used to suggest the next word, which are not saved while Incognito mode is on, in password fields, or in fields that ask keyboards not to learn;<br>
-- text you pin in the clipboard panel, which stays until you unpin it; and<br>
-- for support, the most recent crash report and a short log of voice input events, which you can view and copy in the App's settings. These contain technical details and do not contain what you typed.</p><p>This information never leaves your device. It is not sent to us, to an App Store, or to any other third party, and we have no access to it, no ability to retrieve it, and no copy of it. The App turns off Android cloud backup, so it is not copied to your Google account either.</p>
+- text you pin in the clipboard panel, which stays until you unpin it;<br>
+- a short fingerprint (a one-way hash, not the text itself) of clipboard items you have already seen, used so the same copied item is not offered as a paste suggestion twice, and the time you last used the keyboard; and<br>
+- for support, the most recent crash report and a short log of voice input events, which you can view and copy in the App's settings. These contain technical details, such as screen and keyboard size, and do not contain what you typed.</p><p>This information never leaves your device. It is not sent to us, to an App Store, or to any other third party, and we have no access to it, no ability to retrieve it, and no copy of it. The App turns off Android cloud backup, so it is not copied to your Google account either.</p>
 <p>Text message codes (Section 4) and the clipboard history (Section 6) are kept in memory only and are not saved on your device.</p>
 <p>You can remove saved words and pinned text in the App, and you can delete everything the App keeps by clearing the App's data in your device's settings or by uninstalling the App.</p>
 </section>
 <section>
-<h2>6. Clipboard and Password Fields</h2>
+<h2>6. Clipboard, Spell Checking, and Password Fields</h2>
 <p>The App keeps a short history of items you copy so you can paste them again, and shows the newest one as a paste suggestion in the bar above the keys. This history is kept in the device's memory only, is lost when the keyboard process ends, and can be cleared at any time from the App's settings. Text you pin is stored as described in Section 5.</p>
-<p>The App does not keep clipboard items, learn words, or show suggestions in password fields. Incognito mode, which you can turn on from the bar above the keys or in settings, stops the App from learning words or remembering clipboard items, and apps can request it for private tabs and chats.</p>
+<p>If you choose CodeShift Keyboard as your phone's spell checker in Android settings, Android passes the words you write in apps to the App so it can underline misspellings and suggest corrections. This happens on your device, against the App's built-in word list. The words are not saved, logged, or sent anywhere, and you can switch the spell checker back at any time in Android settings.</p>
+<p>The App reads the clipboard only on your device while the keyboard is in use, to show the paste suggestion and clipboard history. It does not keep clipboard items, learn words, or show suggestions in password fields. Incognito mode, which you can turn on from the bar above the keys or in settings, stops the App from learning words or remembering clipboard items, and apps can request it for private tabs and chats.</p>
 </section>
 <section>
 <h2>7. Emails You Choose to Send Us</h2>
