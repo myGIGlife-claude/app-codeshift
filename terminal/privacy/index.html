@@ -24,7 +24,7 @@ a { color: #0b57d0; }
 <body>
 <main>
 <h1>CodeShift Terminal — Privacy Policy</h1>
-<p class="meta">Effective date: October 5, 2026</p>
+<p class="meta">Effective date: October 11, 2026</p>
 <section>
 <h2>1. Introduction and Your Consent</h2>
 <p>myGIGlife INC. (&quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) publishes CodeShift Terminal (the &quot;App&quot;), an SSH terminal, SFTP file manager and code editor for Android. This Privacy Policy explains what the App does with information. By downloading, installing, or using the App you agree to it. Our separate app, CodeShift Keyboard, has its own <a href="../../privacy/">Privacy Policy</a>.</p>
@@ -35,7 +35,7 @@ a { color: #0b57d0; }
 </section>
 <section>
 <h2>3. Network Connections</h2>
-<p>The App has the Android internet permission for one purpose: to open the SSH and SFTP connections you start to servers you choose, including any jump host or port forward you configure. Those connections go directly between your device and your server. We are not a party to them and do not see them. The App sends nothing to us or to any other third party.</p>
+<p>The App has the Android internet permission for one purpose: to open the SSH and SFTP connections you start to servers you choose, including any jump host or port forward you configure. Those connections go directly between your device and your server. We are not a party to them and do not see them. If you use "Install on server", the App sends your public key (never your private key) to that server over the SSH connection you started. The App sends nothing to us or to any other third party.</p>
 </section>
 <section>
 <h2>4. Information Stored on Your Device</h2>
@@ -43,7 +43,9 @@ a { color: #0b57d0; }
 <p>- your saved hosts, including host names, user names, passwords, SSH private keys and pinned host key fingerprints, encrypted with a key held in the Android Keystore. A key you generate or import never leaves your device;<br>
 - command suggestions (optional, on by default): the commands you run are remembered per host so they can be suggested while you type. They are encrypted on your device. Password prompts, full-screen programs and lines typed into them are not recorded. You can turn this off or clear it in Settings;<br>
 - snippets (saved commands) you create, encrypted on your device;<br>
-- recent files in the code editor: file names and paths only, never file contents; drafts of unsaved edits, kept on your device;<br>
+- recent files in the code editor: file names and paths only, never file contents, encrypted on your device; drafts of unsaved edits, encrypted and kept on your device;<br>
+- a connection log, shown under Logs in the App: the time, the name you gave the host, and what happened (connected, failed, ended), with a short reason that never includes passwords or commands. It is encrypted on your device and is removed with the host;<br>
+- SSH key files in a folder you choose: if you pick a Keys folder in Settings, the App saves the public key there automatically. It saves a private key file there only after you confirm. That file is encrypted with the passphrase you set when you generated the key, or unencrypted if you set none. Files in a folder you choose are outside the App's private storage and are not removed when you uninstall the App. If you copy a private key, the App marks the copy as sensitive and tries to clear it from the clipboard after about a minute;<br>
 - your settings, such as theme, font size and the screen the App opens on.</p>
 <p>Uninstalling the App removes everything it stored. A backup file you export (Section 6) is stored where you put it and is not removed by uninstalling.</p>
 </section>
