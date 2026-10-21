@@ -24,18 +24,18 @@ a { color: #0b57d0; }
 <body>
 <main>
 <h1>CodeShift Terminal — Privacy Policy</h1>
-<p class="meta">Effective date: October 19, 2026</p>
+<p class="meta">Effective date: October 21, 2026</p>
 <section>
 <h2>1. Introduction and Your Consent</h2>
 <p>myGIGlife INC. (&quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) publishes CodeShift Terminal (the &quot;App&quot;), an SSH terminal, SFTP file manager and code editor for Android. This Privacy Policy explains what the App does with information. By downloading, installing, or using the App you agree to it. Our separate app, CodeShift Keyboard, has its own <a href="../../privacy/">Privacy Policy</a>.</p>
 </section>
 <section>
 <h2>2. Summary</h2>
-<p>The App has no account, no ads, no analytics, and no tracking. We do not collect, receive, or sell any personal information. The App connects only to the servers you add. Everything it stores stays on your device.</p>
+<p>The App has no account, no ads, no analytics, and no tracking. We do not collect, receive, or sell any personal information. The App connects only to the servers you add. Everything it stores stays on your device, except an optional encrypted backup file that you choose to keep in a folder you pick (Section 6).</p>
 </section>
 <section>
 <h2>3. Network Connections</h2>
-<p>The App has the Android internet permission for one purpose: to open the SSH and SFTP connections you start to servers you choose, including any jump host or port forward you configure. Those connections go directly between your device and your server. We are not a party to them and do not see them. If you use "Install on server", the App sends your public key (never your private key) to that server over the SSH connection you started. The App sends nothing to us or to any other third party.</p>
+<p>The App has the Android internet permission for one purpose: to open the SSH and SFTP connections you start to servers you choose, including any jump host or port forward you configure. Those connections go directly between your device and your server. We are not a party to them and do not see them. If you use "Install on server", the App sends your public key (never your private key) to that server over the SSH connection you started. The App sends nothing to us or to any other third party. If you turn on cloud backup, the App writes an encrypted backup file to a folder you choose with Android's folder picker; the App itself does not connect to any cloud service, and syncing that folder is done by your own cloud app.</p>
 </section>
 <section>
 <h2>4. Information Stored on Your Device</h2>
@@ -46,6 +46,7 @@ a { color: #0b57d0; }
 - recent files in the code editor: file names and paths only, never file contents, encrypted on your device; drafts of unsaved edits, encrypted and kept on your device;<br>
 - a connection log, shown under Logs in the App: the time, the name you gave the host, and what happened (connected, failed, ended), with a short reason that never includes passwords or commands. It is encrypted on your device and is removed with the host;<br>
 - SSH key files in a folder you choose: if you pick a Keys folder in Settings, the App saves the public key there automatically. It saves a private key file there only after you confirm. That file is encrypted with the passphrase you set when you generated the key, or unencrypted if you set none. Files in a folder you choose are outside the App's private storage and are not removed when you uninstall the App. If you copy a private key, the App marks the copy as sensitive and tries to clear it from the clipboard after about a minute;<br>
+- your cloud backup settings, if you use that option: the folder you picked and the backup passphrase, encrypted with a key held in the Android Keystore, so backups can refresh automatically. They are not copied to another phone;
 - your settings, such as theme, font size and the screen the App opens on.</p>
 <p>Uninstalling the App removes everything it stored. A backup file you export (Section 6) is stored where you put it and is not removed by uninstalling.</p>
 </section>
@@ -56,6 +57,7 @@ a { color: #0b57d0; }
 <section>
 <h2>6. Backup Files and Importing</h2>
 <p>If you choose to export a backup, the App writes your hosts and keys to a file in the place you pick with Android's file picker, encrypted with a passphrase you set. We cannot recover the passphrase. Anyone who has the file and the passphrase can read its contents, so keep both safe. You can also import hosts from an OpenSSH config file you choose; only that file is read.</p>
+<p>Cloud backup is optional and off until you set it up. You pick a folder and a passphrase; after you change your hosts or keys, the App refreshes one encrypted backup file in that folder. The file is encrypted on your phone with your passphrase before it is written, and we cannot recover the passphrase. Your cloud app (for example Google Drive, Dropbox, OneDrive or Nextcloud) copies the file under its own terms and privacy policy, and it may keep older versions, including keys you have since deleted. "Stop and forget" in Settings removes the folder access and the stored passphrase from your phone; it does not delete the file in your folder or cloud.</p>
 </section>
 <section>
 <h2>7. Notifications and Background Service</h2>
@@ -71,7 +73,7 @@ a { color: #0b57d0; }
 </section>
 <section>
 <h2>10. Third-Party Services</h2>
-<p>The servers you connect to are operated by you or by third parties you choose, and their handling of your data is governed by their own policies. Google Play handles distribution and payment.</p>
+<p>The servers you connect to are operated by you or by third parties you choose, and their handling of your data is governed by their own policies. Google Play handles distribution and payment. If you use cloud backup, the cloud service behind the folder you pick stores your encrypted backup file under its own terms.</p>
 </section>
 <section>
 <h2>11. Children</h2>
